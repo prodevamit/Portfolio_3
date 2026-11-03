@@ -53,6 +53,10 @@ assets/
 | Rewrite project copy or project names | `index.html` |
 | Swap placeholder art for images | use `<img class="media" ...>` in `index.html` instead of the abstract CSS media blocks |
 
+## Live Demo
+
+https://prodevamit.github.io/Portfolio_3/
+
 ## Notes
 
 - The sample project names and summaries are intentionally neutral and should be replaced with real case studies when available.
