@@ -1,0 +1,65 @@
+/* ==========================================================================
+   07 — RESPONSIVE
+   Loaded last so it can override anything above.
+   Breakpoints: 960px (tablet / small laptop) and 700px (phone).
+   ========================================================================== */
+
+@media (max-width: 960px) {
+  /* nav collapses into a menu button + dropdown */
+  .nav__toggle { display: inline-flex; align-items: center; justify-content: center; }
+  .nav__links {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px;
+    border-radius: 28px;
+    background: var(--glass-bg), rgba(14, 13, 30, 0.84);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(170%);
+    backdrop-filter: blur(var(--blur)) saturate(170%);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.3s, transform 0.4s var(--ease-out), visibility 0s 0.4s;
+  }
+  .nav.is-open .nav__links {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: opacity 0.3s, transform 0.4s var(--ease-out), visibility 0s;
+  }
+  .nav__links a {
+    display: flex;
+    align-items: center;
+    min-height: 52px;
+    padding: 0 18px;
+    border-radius: 18px;
+    font-size: 17px;
+  }
+  .nav__links a:hover { background: rgba(255, 255, 255, 0.08); }
+  .nav__links .ul { background-image: none; padding-bottom: 0; }
+
+  /* project panels stack and open downwards */
+  .acc { flex-direction: column; height: 700px; }
+  .panel__title { left: 76px; bottom: auto; top: 22px; transform: none !important; font-size: 1.5rem; }
+  .panel__content { top: 70px; left: 20px; width: calc(100% - 40px); }
+  .media { height: 100px; }
+}
+
+@media (max-width: 700px) {
+  .nav__cta { display: none; }
+
+  .stage { height: 300px; }
+  .ring-scale { transform: scale(0.58); }
+
+  .row ul, .row li { gap: 36px; }
+  .row ul { padding-right: 36px; }
+
+  .badge { width: 92px; top: -44px; right: -6px; }
+  .footer__row { flex-direction: column; align-items: flex-start; }
+}

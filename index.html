@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en" data-theme="aurora">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amit Halder — Designer &amp; Developer</title>
+  <meta name="description" content="Portfolio: interfaces that feel effortless, built to last.">
+  <meta name="theme-color" content="#0b0b14">
+
+  <!-- runs first: enables the scroll-reveal styles and restores the saved colour theme -->
+  <script>
+    document.documentElement.classList.add("js");
+    try {
+      var t = localStorage.getItem("site-theme");
+      if (t) document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  </script>
+
+  <!-- fonts (the site still works offline with system fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif&family=JetBrains+Mono:wght@400;500&display=swap">
+
+  <!-- styles, in order -->
+  <link rel="stylesheet" href="assets/css/01-tokens.css">
+  <link rel="stylesheet" href="assets/css/02-base.css">
+  <link rel="stylesheet" href="assets/css/03-glass.css">
+  <link rel="stylesheet" href="assets/css/04-layout.css">
+  <link rel="stylesheet" href="assets/css/05-components.css">
+  <link rel="stylesheet" href="assets/css/06-animations.css">
+  <link rel="stylesheet" href="assets/css/07-responsive.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="page" id="top">
+
+    <!-- ===== background glows (the glass blurs these) ===== -->
+    <div class="orbs" aria-hidden="true">
+      <div class="orb-wrap orb-wrap--1" data-par="-40,-28" data-depth="0.10"><div class="orb orb--1"></div></div>
+      <div class="orb-wrap orb-wrap--2" data-par="52,34"   data-depth="0.16"><div class="orb orb--2"></div></div>
+      <div class="orb-wrap orb-wrap--3" data-depth="0.12"><div class="orb orb--3"></div></div>
+      <div class="orb-wrap orb-wrap--4" data-depth="0.10"><div class="orb orb--4"></div></div>
+      <div class="orb-wrap orb-wrap--5" data-depth="0.14"><div class="orb orb--5"></div></div>
+      <div class="orb-wrap orb-wrap--6" data-depth="0.10"><div class="orb orb--6"></div></div>
+      <div class="orb-wrap orb-wrap--7" data-depth="0.12"><div class="orb orb--7"></div></div>
+    </div>
+
+    <div class="cursor" data-cursor aria-hidden="true"></div>
+
+    <!-- ===== 1. NAV ===== -->
+    <header class="nav" data-nav>
+      <div class="nav__bar">
+        <a class="nav__brand" href="#top">
+          <span class="nav__mark" aria-hidden="true" data-bind="initials">AH</span>
+          <span data-bind="name">Amit Halder</span>
+        </a>
+
+        <nav class="nav__links" id="nav-links" aria-label="Primary">
+          <a class="ul" href="#work">Work</a>
+          <a class="ul" href="#toolkit">Toolkit</a>
+          <a class="ul" href="#about">About</a>
+          <a class="ul" href="#contact">Contact</a>
+        </nav>
+
+        <div class="nav__right">
+          <a class="btn btn--accent nav__cta" href="#contact">Let's talk</a>
+          <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+            <span></span><span></span>
+          </button>
+        </div>
+
+        <div class="nav__progress" data-progress aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <main id="main">
+
+      <!-- ===== 2. HERO ===== -->
+      <section class="hero" data-hero>
+        <div class="hero__spot" data-spot aria-hidden="true"></div>
+        <div class="container hero__inner">
+
+          <p class="chip glass hi" style="--d:0">
+            <span class="dot pulse" aria-hidden="true"></span>
+            <span><span data-bind="role">Designer &amp; Developer</span> · <span data-bind="city">New Delhi, India</span> · Open to new projects</span>
+          </p>
+
+          <h1 class="hero__title hi" style="--d:1" data-headline data-face="grotesk" aria-label="I make interfaces that feel alive">
+            <span aria-hidden="true">
+              <span data-split>I make interfaces</span><br>
+              <span data-split>that</span>
+              <span class="cycle"><span class="cycle__in"><span>feel alive</span><span>move people</span><span>load fast</span><span>last years</span><span>feel alive</span></span></span>
+            </span>
+          </h1>
+
+          <div class="hero__row">
+            <div class="hero__copy hi" style="--d:3">
+              <p class="lead">Hi, I'm <span data-bind="name">Amit Halder</span>. I design and build fast, accessible websites and products, from the first sketch to the last pixel in production.</p>
+
+              <div class="hero__cta">
+                <a class="btn btn--accent btn--lg" href="#contact">
+                  Start a project
+                  <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+                <a class="btn btn--glass btn--lg glass" href="#work">
+                  See selected work
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6"/></svg>
+                </a>
+              </div>
+
+              <div class="typeswitch">
+                <span id="type-label" class="eyebrow">Try the type</span>
+                <div class="seg glass" role="group" aria-labelledby="type-label">
+                  <button type="button" class="seg__btn" data-face-btn="grotesk" aria-pressed="true">Grotesk</button>
+                  <button type="button" class="seg__btn" data-face-btn="serif" aria-pressed="false">Serif</button>
+                  <button type="button" class="seg__btn" data-face-btn="mono" aria-pressed="false">Mono</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero__aside hi" style="--d:3">
+              <div class="badge glass" aria-hidden="true">
+                <div class="badge__ring spin">
+                  <svg viewBox="0 0 200 200">
+                    <defs><path id="badge-path" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"/></defs>
+                    <text fill="currentColor" font-family="JetBrains Mono, monospace" font-size="15" letter-spacing="2.6"><textPath href="#badge-path" textLength="470" lengthAdjust="spacing">AVAILABLE FOR WORK • LET'S TALK • </textPath></text>
+                  </svg>
+                </div>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </div>
+
+              <div data-tilt>
+                <div class="id-card glass">
+                  <div class="id-card__glare" data-glare aria-hidden="true"></div>
+                  <div class="id-card__body">
+                    <div class="id-card__top">
+                      <span class="id-card__avatar" aria-hidden="true" data-bind="initials">AH</span>
+                      <div>
+                        <p class="id-card__name" data-bind="name">Amit Halder</p>
+                        <p class="id-card__role" data-bind="role">Designer &amp; Developer</p>
+                      </div>
+                    </div>
+                    <dl>
+                      <div><dt>Based in</dt><dd data-bind="city">New Delhi, India</dd></div>
+                      <div><dt>Focus</dt><dd>Web · Product · Motion</dd></div>
+                      <div><dt>Status</dt><dd><span class="dot pulse" aria-hidden="true"></span>Open to projects</dd></div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== 3. TYPE BAND (speed follows your scroll) ===== -->
+      <section class="band-section" aria-label="Design, build, animate, ship">
+        <div class="band" data-band>
+          <div class="row row--outline" data-row="-1" aria-hidden="true">
+            <ul data-row-list>
+              <li>Concept<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+              <li>Code<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+              <li>Craft<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+              <li>Launch<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+            </ul>
+          </div>
+          <div class="row" data-row="1" aria-hidden="true">
+            <ul data-row-list>
+              <li>Concept<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+              <li>Code<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+              <li>Craft<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+              <li>Launch<svg viewBox="0 0 24 24"><path d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 4. WORK (flex panels) ===== -->
+      <section class="section section--tight-top" id="work">
+        <div class="container">
+          <div class="section__head reveal">
+            <div>
+              <p class="eyebrow">01 — Selected work</p>
+              <h2 class="h2">Hover to unfold</h2>
+            </div>
+            <p>A few projects, each one a small case study. Hover, tap or use the arrow keys.</p>
+          </div>
+
+          <div class="acc reveal" data-accordion role="group" aria-label="Selected projects">
+            <article class="panel glass is-active" data-panel>
+              <button class="panel__hit" type="button" aria-expanded="true" aria-label="Show Project One details"></button>
+              <span class="panel__num" aria-hidden="true">01</span>
+              <h3 class="panel__title">Project One</h3>
+              <div class="panel__content">
+                <div class="media media--1" role="img" aria-label="Abstract artwork for Project One"></div>
+                <p class="panel__meta">Web app · 2026</p>
+                <p class="panel__text">A one-sentence summary of the problem this project solved and the result it delivered.</p>
+                <a class="link-arrow ul" href="#contact">View project
+                  <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="panel glass" data-panel>
+              <button class="panel__hit" type="button" aria-expanded="false" aria-label="Show Project Two details"></button>
+              <span class="panel__num" aria-hidden="true">02</span>
+              <h3 class="panel__title">Project Two</h3>
+              <div class="panel__content">
+                <div class="media media--2" role="img" aria-label="Abstract artwork for Project Two"></div>
+                <p class="panel__meta">Brand &amp; site · 2025</p>
+                <p class="panel__text">A one-sentence summary of the problem this project solved and the result it delivered.</p>
+                <a class="link-arrow ul" href="#contact">View project
+                  <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="panel glass" data-panel>
+              <button class="panel__hit" type="button" aria-expanded="false" aria-label="Show Project Three details"></button>
+              <span class="panel__num" aria-hidden="true">03</span>
+              <h3 class="panel__title">Project Three</h3>
+              <div class="panel__content">
+                <div class="media media--3" role="img" aria-label="Abstract artwork for Project Three"></div>
+                <p class="panel__meta">Mobile · 2025</p>
+                <p class="panel__text">A one-sentence summary of the problem this project solved and the result it delivered.</p>
+                <a class="link-arrow ul" href="#contact">View project
+                  <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="panel glass" data-panel>
+              <button class="panel__hit" type="button" aria-expanded="false" aria-label="Show Project Four details"></button>
+              <span class="panel__num" aria-hidden="true">04</span>
+              <h3 class="panel__title">Project Four</h3>
+              <div class="panel__content">
+                <div class="media media--4" role="img" aria-label="Abstract artwork for Project Four"></div>
+                <p class="panel__meta">Design system · 2024</p>
+                <p class="panel__text">A one-sentence summary of the problem this project solved and the result it delivered.</p>
+                <a class="link-arrow ul" href="#contact">View project
+                  <svg class="arr" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 5. TOOLKIT (3D ring: drag to spin) ===== -->
+      <section class="section" id="toolkit" style="overflow:hidden;padding-top:clamp(40px,6vw,80px)">
+        <div class="container reveal">
+          <p class="eyebrow">02 — Toolkit</p>
+          <h2 class="h2" style="margin-top:16px;max-width:14ch">Everything it takes to ship</h2>
+          <p class="lead" style="margin-top:16px">Drag the ring to spin it.</p>
+        </div>
+        <div class="stage-wrap" data-stage>
+          <div class="ring-scale">
+            <div class="stage">
+              <div class="ring-tilt">
+                <ul class="ring" data-ring aria-label="Skills">
+                  <li class="tile" style="--i:0"><p class="tile__n">01</p><h3 class="tile__t">Product design</h3><p class="tile__d">Flows, wireframes and polish.</p></li>
+                  <li class="tile" style="--i:1"><p class="tile__n">02</p><h3 class="tile__t">Front-end</h3><p class="tile__d">Semantic, fast and responsive.</p></li>
+                  <li class="tile" style="--i:2"><p class="tile__n">03</p><h3 class="tile__t">Design systems</h3><p class="tile__d">Tokens and components that scale.</p></li>
+                  <li class="tile" style="--i:3"><p class="tile__n">04</p><h3 class="tile__t">Prototyping</h3><p class="tile__d">Clickable, testable, quick.</p></li>
+                  <li class="tile" style="--i:4"><p class="tile__n">05</p><h3 class="tile__t">Motion</h3><p class="tile__d">Meaning, not decoration.</p></li>
+                  <li class="tile" style="--i:5"><p class="tile__n">06</p><h3 class="tile__t">Accessibility</h3><p class="tile__d">Usable by everyone.</p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 6. ABOUT + FOLDING STEPS ===== -->
+      <section class="section" id="about" style="padding-top:clamp(40px,6vw,80px)">
+        <div class="container about">
+          <div class="about__text reveal">
+            <p class="eyebrow">03 — About</p>
+            <h2 class="h2">Calm process, sharp details.</h2>
+            <p class="lead">I'm <span data-bind="name">Amit Halder</span>, a <span data-bind="role">Designer &amp; Developer</span> based in <span data-bind="city">New Delhi, India</span>. I care about the details people feel but rarely notice: spacing, timing, and the small moments between clicks.</p>
+          </div>
+
+          <div class="folds reveal" data-folds>
+            <div class="fold is-open" data-fold>
+              <button class="fold__head glass" type="button" aria-expanded="true" aria-controls="fold-1">
+                <span class="fold__n">01</span>
+                <span class="fold__t">Listen first</span>
+                <svg class="fold__plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="fold__body" id="fold-1"><div class="fold__clip"><div class="fold__sheet glass"><p>I start with the people and the problem, long before I open a design tool. Good questions early save weeks of rework later.</p></div></div></div>
+            </div>
+
+            <div class="fold" data-fold>
+              <button class="fold__head glass" type="button" aria-expanded="false" aria-controls="fold-2">
+                <span class="fold__n">02</span>
+                <span class="fold__t">Prototype early</span>
+                <svg class="fold__plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="fold__body" id="fold-2"><div class="fold__clip"><div class="fold__sheet glass"><p>A rough, clickable idea beats a long document. I put real ones in front of real users fast, then refine what they actually touch.</p></div></div></div>
+            </div>
+
+            <div class="fold" data-fold>
+              <button class="fold__head glass" type="button" aria-expanded="false" aria-controls="fold-3">
+                <span class="fold__n">03</span>
+                <span class="fold__t">Ship and refine</span>
+                <svg class="fold__plus" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+              </button>
+              <div class="fold__body" id="fold-3"><div class="fold__clip"><div class="fold__sheet glass"><p>Launch is a checkpoint, not a finish line. I measure, listen, and keep improving, with clean handoff so the work is easy to own.</p></div></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 7. CONTACT ===== -->
+      <section class="section" id="contact" style="padding-top:0">
+        <div class="container">
+          <div class="contact glass reveal">
+            <p class="eyebrow">04 — Contact</p>
+            <h2 class="h2">
+              Let's build something
+              <span class="cycle"><span class="cycle__in"><span>bold.</span><span>calm.</span><span>fast.</span><span>lasting.</span><span>bold.</span></span></span>
+            </h2>
+            <div class="contact__row">
+              <a class="btn btn--accent btn--xl" href="mailto:hello@amit-halder.dev" data-bind-href="email">
+                <span data-bind="email">hello@amit-halder.dev</span>
+                <svg class="arr" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+              <nav class="social" aria-label="Social">
+                <a class="ul" href="https://github.com/amit-halder" data-social="github" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a class="ul" href="https://www.linkedin.com/in/amit-halder" data-social="linkedin" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="ul" href="https://dribbble.com/amit-halder" data-social="dribbble" target="_blank" rel="noopener noreferrer">Dribbble</a>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== 8. FOOTER ===== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__row">
+          <p>© <span data-year>2026</span> <span data-bind="name">Amit Halder</span>. Designed and built by hand.</p>
+          <div class="footer__tools">
+            <div class="themes" role="group" aria-label="Colour theme">
+              <span class="themes__label">Theme</span>
+              <button type="button" data-theme-btn="aurora" aria-pressed="true"><i></i>Aurora</button>
+              <button type="button" data-theme-btn="sunset" aria-pressed="false"><i></i>Sunset</button>
+              <button type="button" data-theme-btn="ocean" aria-pressed="false"><i></i>Ocean</button>
+            </div>
+            <a class="ul to-top" href="#top">
+              Back to top
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- scripts, in order (plain scripts, so the site also works when opened straight from a folder) -->
+  <script defer src="assets/js/01-config.js"></script>
+  <script defer src="assets/js/02-utils.js"></script>
+  <script defer src="assets/js/03-engine.js"></script>
+  <script defer src="assets/js/04-content.js"></script>
+  <script defer src="assets/js/05-reveal.js"></script>
+  <script defer src="assets/js/06-headline.js"></script>
+  <script defer src="assets/js/07-hero.js"></script>
+  <script defer src="assets/js/08-cursor.js"></script>
+  <script defer src="assets/js/09-magnetic.js"></script>
+  <script defer src="assets/js/10-marquee.js"></script>
+  <script defer src="assets/js/11-projects.js"></script>
+  <script defer src="assets/js/12-ring.js"></script>
+  <script defer src="assets/js/13-fold.js"></script>
+  <script defer src="assets/js/14-nav.js"></script>
+  <script defer src="assets/js/15-theme.js"></script>
+  <script defer src="assets/js/99-main.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ==========================================================================
+   01 — TOKENS
+   Colours, fonts, spacing and easing. Everything else reads from here.
+   Palettes are switched with <html data-theme="aurora|sunset|ocean">.
+   ========================================================================== */
+
+:root {
+  /* surface + text */
+  --bg: #0b0b14;
+  --fg: #f4f4fa;
+  --muted: #c3c3d3;
+  --ink: #0e0f0a; /* text that sits on the accent colour */
+
+  /* palette: aurora (default) */
+  --accent: #d6ff5c;
+  --o1: #6c5cff;
+  --o2: #ff4f9a;
+  --o3: #18d6c4;
+
+  /* glass strength */
+  --blur: 22px;
+
+  /* type */
+  --font-display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* layout */
+  --maxw: 1280px;
+  --gutter: clamp(20px, 5vw, 72px);
+  --section-pad: clamp(64px, 9vw, 128px);
+
+  /* motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+:root[data-theme="sunset"] {
+  --accent: #ffe066;
+  --o1: #ff6a3d;
+  --o2: #ff3d8b;
+  --o3: #8a4dff;
+}
+
+:root[data-theme="ocean"] {
+  --accent: #b6ffd9;
+  --o1: #2f7bff;
+  --o2: #16d4e8;
+  --o3: #8a63ff;
+}
